@@ -44,18 +44,18 @@ Simple application for booking flights.
 ## Criteria
 
 - [x] *-- No authentication for now --*
-  - [ ] Pick random profile on load to book
-  - [ ] Use Angular State management to store current profile
+  - [x] Pick random profile on load to book
+  - [x] Use Angular State management to store current profile
 - [x] Build mock server for testing and development
   - [x] Use faker to generate mock data in mocked services
-- [ ] Add angular material to layout
-- [ ] Create booking page
-- [ ] Implement flight search functionality
-  - [ ] Use mock data for flights
-  - [ ] Display search results in a user-friendly format
-  - [ ] Display additional flight details
+- [x] Add angular material to layout
+- [x] Create booking page
+- [x] Implement flight search functionality
+  - [x] Use mock data for flights
+  - [x] Display search results in a user-friendly format
+  - [x] Display additional flight details
 - [ ] Implement admin functionalities
   - [x] List all profiles
-  - [ ] Search profiles by username, firstname or lastname
+  - [x] Search profiles by username, firstname or lastname
   - [ ] View profile details
   - [ ] View booked flights per profile
