@@ -1,0 +1,20 @@
+.filter-input {
+    width: 500px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.2s;
+
+    &:focus {
+        outline: none;
+        background-color: rgb(233, 236, 248, 0.9);
+    }
+}
+
+.container {
+    background-image: url('/assets/ac_banner.jpg');
+    background-position: 25% 75%;
+    height: 100vh;
+    justify-content: flex-start;
+}

@@ -1,0 +1,67 @@
+<div class="row justify-between">
+    <h1>Flight details</h1>
+    <button class="close-button" (click)="closeDialog()"><mat-icon>close</mat-icon></button>
+</div>
+
+<h1>Departing {{flightData.departureTime | date}}</h1>
+<div class="row justify-between">
+    <p>{{flightData.departure}} to {{flightData.arrival}}</p>
+    <p>Total duration: {{duration}}</p>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="timeline row">
+        <div class="departureTime">{{formatTime(flightData.departureTime)}}</div>
+        <div class="divider">
+            <div class="bullet-point"></div>
+            <div class="vertical-line"></div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column">
+            <div>
+                <div class="row">
+                    <strong class="departure">{{flightData.departure}}</strong><span>{{flightData.departureAirportCode}}</span>
+                </div>
+                <span class="airport">{{flightData.departureAirport}}</span>
+            </div>
+            <div class="aircraft">
+                <p><img class="ac-icon" src="/assets/ac_icon.png" alt="ac_icon"> AC 5 | Operated by Air Canada</p>
+                <span>{{flightData.aircraft}}</span>
+            </div>
+            <div class="flight-details"><mat-icon class="clock-icon">schedule</mat-icon>{{duration}}</div>
+            <div class="flight-details"><mat-icon class="wifi-icon">wifi</mat-icon> Wi-Fi</div> 
+        </div>
+        
+        <img class="aircraft-image" src="/assets/ac_aircraft.png" alt="ac_aircraft">
+    </div>
+</div>
+
+<div class="row">
+    <div class="timeline row">
+        <div class="arrivalTime">{{formatTime(flightData.arrivalTime)}}</div>
+        <div class="divider">
+            <div class="bullet-point"></div>
+        </div>
+    </div>
+
+    <div class="row justify-between flex-1">
+        <div>
+            <div class="column">
+                <div>
+                    <div class="row">
+                        <strong class="arrival">{{flightData.arrival}}</strong><span>{{flightData.arrivalAirportCode}}</span>
+                    </div>
+                    <span class="airport">{{flightData.arrivalAirport}}</span>
+                </div>
+            </div>
+            <p>Arriving {{flightData.arrivalTime | date}}</p>
+        </div>
+        
+        <button *ngIf="!this.containsFlight()" class="primary-button" (click)="this.addFlight()">Confirm booking</button>
+        <button *ngIf="this.containsFlight()" class="primary-button" (click)="this.removeFlight()">Cancel booking</button>
+    </div>
+</div>

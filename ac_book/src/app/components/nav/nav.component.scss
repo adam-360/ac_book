@@ -1,0 +1,62 @@
+.nav {
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1b1d1c;
+}
+
+.nav-link {
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    &:first-child {
+        margin: 0;
+    }
+}
+
+.logo {
+    max-height: 45px; 
+    margin-left: 25px;
+}
+
+.icon {
+    color: white;
+    position: relative;
+    top: 4px;
+}
+
+.nav-link {
+    .icon {
+        margin-left: 5px;
+    }
+}
+
+.user {
+    .icon {
+        margin-right: 10px;
+        top: 6px;
+    }
+    span {
+        font-size: 16px;
+    }
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    color: white;
+    .separator {
+        width: 1px;
+        height: 24px;
+        margin: 0 20px;
+        background-color: #333;
+        align-self: flex-end;
+    }
+    &:last-child {
+        margin-right: 40px;
+    }
+}

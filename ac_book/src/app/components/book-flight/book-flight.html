@@ -1,0 +1,56 @@
+<div class="container">
+  <h1>Flights</h1>
+  <div class="filter">
+    <p>Search for a flight</p>
+    <input type="text" class="filter-input" [(ngModel)]="filter" />
+  </div>
+  
+  <table mat-table [dataSource]="flights" class="mat-elevation-28" *ngIf="flights && flights.length > 0">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Flight ID </th>
+      <td mat-cell *matCellDef="let flight"> {{ flight.id }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="flightNumber">
+      <th mat-header-cell *matHeaderCellDef> Flight Number </th>
+      <td mat-cell *matCellDef="let flight"> {{ flight.flightNumber }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="departure">
+      <th mat-header-cell *matHeaderCellDef> Departure </th>
+      <td mat-cell *matCellDef="let flight"> {{ flight.departure }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="arrival">
+      <th mat-header-cell *matHeaderCellDef> Arrival </th>
+      <td mat-cell *matCellDef="let flight"> {{ flight.arrival }} </td>
+    </ng-container>
+    <ng-container matColumnDef="departureTime">
+      <th mat-header-cell *matHeaderCellDef> Departure Time </th>
+      <td mat-cell *matCellDef="let flight"> {{ flight.departureTime | date }} </td>
+    </ng-container>
+    <ng-container matColumnDef="arrivalTime">
+      <th mat-header-cell *matHeaderCellDef> Arrival Time </th>
+      <td mat-cell *matCellDef="let flight"> {{ flight.arrivalTime | date }} </td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let flight"> {{ flight.price }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let flight">
+        <button class="primary-button" mat-button (click)="book(flight)">Book</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div *ngIf="!flights || flights.length === 0" class="no-users">
+    <p>No flights found.</p>
+  </div>
+</div>

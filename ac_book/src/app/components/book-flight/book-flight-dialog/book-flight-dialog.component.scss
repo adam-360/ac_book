@@ -1,0 +1,82 @@
+.flex-1 {
+    flex: 1;
+}
+
+.divider {
+    position: relative;
+    top: 3px;
+    margin-left: 7px;
+}
+
+.bullet-point {
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+    position: relative;
+    right: 6px;
+}
+
+.vertical-line {
+    border-left: 1px solid black;
+    height: 200px;
+}
+
+.timeline {
+    gap: 10px;
+}
+
+.aircraft-image {
+    margin-left: 100px;
+    max-width: 250px;
+    max-height: 100px;
+    align-self: center;
+}
+
+.ac-icon {
+    position: relative;
+    top: 8px;
+    max-width: 21px;
+    margin-right: 5px;
+}
+
+.wifi-icon {
+    font-size: 24px;
+}
+
+.flight-details {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.close-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    align-self: flex-start;
+}
+
+.departureTime, .arrivalTime, .departure, .arrival {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.departure, .arrival {
+    margin-right: 5px;
+}
+
+.airport {
+    font-size: 13px;
+}
+
+.aircraft {
+    span {
+        margin-left: 30px;
+    }
+}
+
+p {
+    margin: 0;
+}
+

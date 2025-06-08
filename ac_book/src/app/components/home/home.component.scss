@@ -1,0 +1,176 @@
+.welcome {
+    text-align: center;
+    font-size: 36px;
+}
+
+.container {
+    background-image: url('/assets/home_bg.jpg');
+    background-position: top;
+    height: 55vh;
+    justify-content: flex-start;
+}
+
+.flights {
+    margin: 30px 0;
+    align-self: center;
+}
+
+.no-flights {
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.flight {
+    padding: 30px 50px;
+    border-radius: 15px;
+    background-color: white;
+    width: 650px;
+    max-width: 650px;
+    justify-self: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 30px 0;
+}
+
+.flight-title {
+    strong {
+        font-weight: 600;
+    }
+}
+
+.header {
+    justify-content: space-between;
+    .delete-button {
+        padding: 3px;
+        height: fit-content;
+        mat-icon {
+            position: relative;
+            top: 2px;
+            font-size: 20px;
+        }
+    }
+}
+
+.flights-container {
+    padding: 30px 60px;
+    margin-bottom: 60px;
+    background-color: #f3f3f3;
+    border-radius: 24px;
+    min-height: fit-content;
+    max-width: 1000px;
+    color: black;
+    align-items: center;
+}
+
+.trip {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+
+.airplane-icon {
+    position: relative;
+    font-size: 45px;
+    bottom: 225px;
+    left: 170px;
+    transform: rotate(90deg);
+}
+
+.departure, .destination {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+    top: 40px;
+}
+
+.city {
+    color: #333;
+    width: 200px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.airport-code {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.departure {
+    left: 30px;
+}
+.destination {
+    right: 30px;
+}
+
+.dotted-line {
+    height: 200px;
+    width: 325px;
+    position: relative;
+}
+
+.dotted-line:after {
+    content: "";
+    position: absolute;
+    height: 45%;
+    width: 100%;
+    border: 2px solid transparent;
+    border-style: dashed;
+    border-top-color: black;
+    top: -5px;
+    border-radius: 50%;
+}
+
+.left-circle, .right-circle {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    background-color: #f3f3f3;
+    width: 2rem;
+    height: 4rem;
+    bottom: 105px;
+}
+
+.left-circle {
+    right: 42px;
+    border-radius: 0 10rem 10rem 0;
+    box-shadow: -8px 0px 10px 1px #f3f3f3;
+}
+.right-circle {
+    left: 211px;
+    border-radius: 10rem 0 0 10rem;
+    box-shadow: 8px 0 5px -2px #f3f3f3;
+}
+
+.flight-details {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 15px;
+    span {
+        color: #333;
+    }
+    .detail {
+        text-align: center;
+        width: 200px;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    p {
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
+.departure-time, .arrival-time {
+    margin-top: 15px;
+    h1 {
+        
+        font-weight: 600;
+    }
+}
+
+

@@ -1,0 +1,100 @@
+<div class="dialog">
+    <h1>Edit user: {{user.username}}</h1>
+    <div class="row">
+        <div class="input-container">
+            <label for="firstName">First Name</label>
+            <input
+                [(ngModel)]="user.firstName"
+                type="text"
+                class="text-input"
+            >
+        </div>
+        <div class="input-container">
+            <label for="lastName">Last Name</label>
+            <input
+            [(ngModel)]="user.lastName"
+            type="text"
+            class="text-input"
+            >
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-container">
+            <label for="street">Street</label>
+            <input
+            [(ngModel)]="user.address.street"
+            type="text"
+            class="text-input"
+            >
+        </div>
+        <div class="input-container">
+            <label for="city">City</label>
+            <input
+                [(ngModel)]="user.address.city"
+                type="text"
+                class="text-input"
+            >
+        </div>
+        <div class="input-container">
+            <label for="state">State</label>
+            <input
+                [(ngModel)]="user.address.state"
+                type="text"
+                class="text-input"
+            >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-container">
+            <label for="country">Country</label>
+            <input
+            [(ngModel)]="user.address.country"
+            type="text"
+            class="text-input"
+            >
+        </div>
+        <div class="input-container">
+            <label for="zipCode">ZIP Code</label>
+            <input
+                [(ngModel)]="user.address.zipCode"
+                type="text"
+                class="text-input"
+            >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-container">
+            <label for="phoneNumber">Phone Number</label>
+            <input
+                [(ngModel)]="user.phoneNumber"
+                type="text"
+                class="text-input"
+            >
+        </div>    
+    </div>
+    
+    
+    <div class="input-radio">
+        <label for="isAdmin">Admin</label>
+        <input
+            [(ngModel)]="user.isAdmin"
+            type="radio"
+            [value]="true"
+        >
+    </div>
+    <div class="input-radio">
+        <label for="isAdmin">Regular User</label>
+        <input
+            [(ngModel)]="user.isAdmin"
+            type="radio"
+            [value]="false"
+        >
+    </div>
+    
+
+    <div class="button-container">
+        <button class="primary-button" (click)="this.save()">Save</button>
+    </div>
+</div>

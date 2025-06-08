@@ -1,0 +1,73 @@
+<div class="container">
+
+    <strong class="welcome">Welcome {{this.currentUser?.firstName}} {{this.currentUser?.lastName}}!</strong>
+
+    <div class="flights">
+        <h1>My Flights</h1>
+        <div class="flights-container">
+            <div class="no-flights" *ngIf="currentUser?.flights?.length === 0">
+                <h1 class="flight-title">
+                    You don't have any booked flights.
+                </h1>
+                <h1 class="flight-title">
+                    <a routerLink="/book">Click here to book</a>
+                </h1>
+            </div>
+            <div class="flight" *ngFor="let flight of currentUser?.flights">
+                <div class="header row">
+                    <h1 class="flight-title">
+                        Flight to <strong>{{flight.arrival}}</strong>
+                    </h1>
+                    <button class="delete-button" (click)="delete(flight)"><mat-icon>close</mat-icon></button>
+                </div>
+                <div class="trip">
+                    <div class="departure">
+                        <span class="airport-code">{{flight.departureAirportCode}}</span>
+                        <span class="city">{{flight.departure}}</span>
+                        <div class="departure-time">
+                            <span>Depart</span>
+                            <h1>{{flight.departureTime | date:'shortTime' }}</h1>
+                        </div>
+                        <div class="left-circle"></div>
+                    </div>
+                    <div class="trajectory">
+                        <div class="dotted-line"></div>
+                        <mat-icon class="airplane-icon">flight</mat-icon>
+        
+                    </div>
+                    <div class="destination">
+                        <span class="airport-code">{{flight.arrivalAirportCode}}</span>
+                        <span class="city">{{flight.arrival}}</span>
+                        <div class="arrival-time">
+                            <span>Arrive</span>
+                            <h1>{{flight.arrivalTime | date:'shortTime' }}</h1>
+                        </div>
+                        <div class="right-circle"></div>
+                    </div>
+                </div>
+                <div class="flight-details">
+                    <div class="detail">
+                        <span>Flight ID</span>
+                        <p>{{flight.id}}</p>
+                    </div>
+                    <div class="detail">
+                        <span>Flight Number</span>
+                        <p>{{flight.flightNumber}}</p>
+                    </div>
+                    <div class="detail">
+                        <span>Class</span>
+                        <p>{{this.getFlightClass(flight.id)}}</p>
+                    </div>
+                    <div class="detail">
+                        <span>Terminal</span>
+                        <p>A</p>
+                    </div>
+                    <div class="detail">
+                        <span>Aircraft</span>
+                        <p>{{flight.aircraft}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

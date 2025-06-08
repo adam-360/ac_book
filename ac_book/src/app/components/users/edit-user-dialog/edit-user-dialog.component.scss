@@ -1,0 +1,36 @@
+.text-input {
+    width: fit-content;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.2s;
+
+    &:focus {
+        outline: none;
+        background-color: rgb(233, 236, 248, 0.9);
+    }
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog {
+    gap: 30px;
+}
+
+.row {
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    .primary-button {
+        padding: 15px 30px;
+    }
+}
+
